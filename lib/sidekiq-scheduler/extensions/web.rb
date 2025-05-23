@@ -16,6 +16,7 @@ if SidekiqScheduler::SidekiqAdapter::SIDEKIQ_GTE_8_0_0
     end
   end
 else
+  raise "omg"
   Sidekiq::Web.register(SidekiqScheduler::Web, **args) do |app|
     # add middleware or additional settings here
   end
